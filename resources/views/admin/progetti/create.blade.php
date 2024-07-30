@@ -40,6 +40,11 @@
                     <input type="radio" id="1" name="completato" value="1">
                     <label for="completato">No</label>
                     <input type="radio" id="0" name="completato" value="0">
+                    <select class="from-select" name="type_id">
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}"> {{ $type->name }} </option>
+                        @endforeach
+                    </select>
                     <button class="btn  btn-primary mx-4">Crea</button>
 
 

@@ -8,7 +8,7 @@
                     <ul class="list-group">
 
                         <li class="list-group-item">Nome: {{ $project->nome }} </li>
-                        <li class="list-group-item">Descrizione: {{ $project->descrizione }}</li>
+                        <li class="list-group-item">Tipo: {{ $project->type->name }}</li>
                         <li class="list-group-item">Inizio: {{ $project->data_inizio }} </li>
                         <li class="list-group-item">Fine: {{ $project->data_fine }} </li>
 

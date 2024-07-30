@@ -26,6 +26,7 @@ class StoreProjectRequest extends FormRequest
             "descrizione" => ["required", "string", "min:20"],
             "completato" => ["required"],
             "data_fine" => ["required"],
+            "type_id" => ["required", "exists:types,id"],
         ];
     }
 

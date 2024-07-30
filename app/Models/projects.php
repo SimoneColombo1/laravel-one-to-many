@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use function PHPSTORM_META\type;
+
 class projects extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        "type_id",
         "nome",
         "descrizione",
         "data_inizio",
@@ -18,4 +21,9 @@ class projects extends Model
 
 
     ];
+
+    public function type()
+    {
+        return $this->belongsTo(type::class);
+    }
 }

@@ -11,6 +11,9 @@
                         {{ $project->nome }}
                     </li>
                     <li class="list-group-item">
+                        {{ $project->type->name }}
+                    </li>
+                    <li class="list-group-item">
                         {{ $project->descrizione }}
                     </li>
                     <li class="list-group-item">

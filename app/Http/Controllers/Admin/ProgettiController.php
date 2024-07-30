@@ -7,7 +7,10 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use Illuminate\Http\Request;
 use App\Models\projects;
+use App\Models\Type;
 use Carbon\Carbon;
+
+use function PHPSTORM_META\type;
 
 class ProgettiController extends Controller
 {
@@ -25,7 +28,10 @@ class ProgettiController extends Controller
      */
     public function create()
     {
-        return view('admin.progetti.create');
+
+        $project = new Projects();
+        $types = type::all();
+        return view('admin.progetti.create', compact('project', 'types'));
     }
 
     /**
@@ -52,7 +58,8 @@ class ProgettiController extends Controller
      */
     public function edit(projects $project)
     {
-        return  view('admin.progetti.edit', compact("project"));
+        $type = Type::all();
+        return  view('admin.progetti.edit', compact("project", "type"));
     }
 
     /**
