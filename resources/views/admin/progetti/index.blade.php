@@ -38,6 +38,11 @@
                 </div>
             @endforeach
         </div>
+
+
+
+        <div class="nav-links col-12">{{ $projects->onEachSide(5)->links() }}</div>
+
     </div>
 @endsection
 
